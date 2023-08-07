@@ -1,5 +1,6 @@
 package com.raghib.selenium4;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;
@@ -23,6 +24,7 @@ public class InvokingMultipleWindowsOrTabs {
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver(options);
 
         Duration duration = Duration.ofSeconds(30);

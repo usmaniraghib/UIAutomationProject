@@ -24,6 +24,7 @@ Collect all the links from the webpage. All the links are associated with the Ta
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver(options);
 
         driver.get(url);
